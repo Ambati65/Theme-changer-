@@ -7,23 +7,23 @@ import './App.css'
 
 
 function App() {
-  const [useTheame,setTheame] = useState("light")
+  const [theameMode,setTheameMode] = useState("light")
 
   const LightTheame=()=>{
-    setTheame('light')
+    setTheameMode('light')
   }
 
   const darkTheame=()=>{
-    setTheame('dark')
+    setTheameMode('dark')
   }
 
   useEffect(()=>{
     document.querySelector('html').classList.remove("light", "dark");
-    document.querySelector('html').classList.add(useTheame);
-  },[useTheame])
+    document.querySelector('html').classList.add(theameMode);
+  },[theameMode])
 
   return (
-      <ThemeProvider value={{useTheame, LightTheame, darkTheame}}>
+      <ThemeProvider value={{theameMode, LightTheame, darkTheame}}>
       <div className="flex flex-wrap min-h-screen items-center">
           <div className="w-full">
               <div className="w-full max-w-sm mx-auto flex justify-end mb-4">

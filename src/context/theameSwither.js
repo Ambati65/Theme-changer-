@@ -1,7 +1,7 @@
 import React ,{useContext,createContext} from "react";
 
 export const Theame=createContext({
-    theame:"light",
+    theameMode:"light",
     darkTheame: ()=>{},
     LightTheame:()=>{},
 })
